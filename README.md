@@ -2,13 +2,12 @@
 
 A sample dependencies injector to use, mesh_di.
 
-// sample injection 
+Example:
 
-  final _instance = MeshInjector().instance;
-
+final _instance = MeshInjector().instance;
   
-  _instance.put<Dependency>();
+_instance.put<Dependency>();
 
-  _instance.putFactory<Dependency>(() => DependencyImpl());
+_instance.putFactory<Dependency>(() => DependencyImpl());
 
-  _instance.find<Dependency>();
+_instance.find<Dependency>();

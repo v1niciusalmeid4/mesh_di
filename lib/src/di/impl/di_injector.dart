@@ -27,4 +27,9 @@ class _InternalMeshInjector implements Injector {
   void clear() {
     _map.clear();
   }
+
+  @override
+  find<T>({String? tag}) {
+    _map.entries.firstWhere((d) => d.key.type == T && d.key.tag == tag);
+  }
 }

@@ -30,6 +30,15 @@ class _InternalMeshInjector implements Injector {
 
   @override
   find<T>({String? tag}) {
-    _map.entries.firstWhere((d) => d.key.type == T && d.key.tag == tag);
+    final result = _map.entries.firstWhere(
+      (element) => element.key.type == T && element.key.tag == tag,
+      orElse: () => throw UnimplementedError('Dependencia $T não encontrada'),
+    );
+
+    if (result.value is Function) {
+      return result.value();
+    }
+
+    return result.value;
   }
 }

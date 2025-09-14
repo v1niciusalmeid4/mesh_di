@@ -1,4 +1,4 @@
-import 'package:dependency_injector/src/di/di.dart';
+import 'package:mesh_di/src/di/di.dart';
 
 class MeshInjector {
   // ignore: library_private_types_in_public_api

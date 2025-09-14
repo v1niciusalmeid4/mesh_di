@@ -1,5 +1,5 @@
-name: dependency_injector
-description: "A new Flutter project."
+name: mesh_di
+description: "A sample implementation from dependency injector (DI)"
 publish_to: 'none'
 version: 0.1.0
 
